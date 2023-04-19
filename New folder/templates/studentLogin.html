@@ -1,0 +1,39 @@
+{% extends 'base.html'%}
+
+{% block body%}
+<form action="capture" method="post">
+    {% csrf_token %}
+    <lable for="course_code">Course Code :</lable>
+    
+    <input type="text" id="course_code" name="course_code"><br><br>
+
+    <label for="Roll no">Roll No :</label>
+    <input type="number" name="roll_no" id="roll_no">
+    <br><br>
+    <label for="Branch">Branch :</label>
+    <select id="branch" name ="branch">
+    
+        <option value ="CM ">CM </option>
+        <option value ="IF"> IF </option>
+     </select>
+    <br><br>
+    <lable for="year">year :</lable>
+        <select id="year" name ="year">
+        
+            <option value ="1">1 </option>
+            <option value ="2"> 2 </option>
+            <option value ="3">3 </option>
+            </select>
+    <br><br>
+    <lable for="year">PT :</lable>
+        <select id="pt" name ="pt">
+        
+            <option value ="1">1 </option>
+            <option value ="2"> 2 </option>
+            
+            </select>
+    <br><br>
+    
+        <input type="submit" value="Submit">
+</form>
+{%endblock body%}

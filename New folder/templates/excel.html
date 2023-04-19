@@ -1,0 +1,39 @@
+{% extends 'base.html'%}
+
+{% block head %}
+<link href="static/excel.css" rel="stylesheet">
+
+{% endblock head %}
+
+{% block body%}
+
+<form action="excel" method="post">
+    {% csrf_token %}
+    <lable for="course_code">Course Code :</lable>
+    
+    <input type="text" id="course_code" name="course_code"><br><br>
+    
+    <lable for="branch">Branch :</lable> <select id="branch" name ="branch">
+    
+    <option value ="CM ">CM </option>
+    <option value ="IF"> IF </option>
+    
+    </select>
+    
+    <br><br>
+    
+    <lable for="year">Year :</lable> <select id="year" name="year">
+    
+    <option value="1">1</option>
+    
+    <option value ="2">2</option> 
+    <option value ="3"> 3 </option>
+    
+    </select>
+    
+    <br><br>
+    
+    <input type="submit" value="Submit">
+    
+    </form>
+{%endblock body%}

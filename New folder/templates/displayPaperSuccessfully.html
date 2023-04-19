@@ -1,0 +1,11 @@
+{% extends 'base.html'%}
+
+{% block body%}
+
+    {% for inner_array in resultArray %}
+        <p>>Question {{ forloop.counter0 | add:1}}</p><br>
+        {% for i in length_range(0, inner_array|length|subtract:"1") %}
+            {{ alphabet.i|add:":" }} = {{inner_array.i}}<br>
+        {% endfor %}
+    {% endfor %}
+{%endblock body%}

@@ -1,0 +1,56 @@
+{% extends 'base.html'%}
+
+{% block body%}
+  <form action="setCourceOutcome" method="post">
+      {% csrf_token %}
+      <lable for="course_code">Course Code :</lable>
+    
+    <input type="text" id="course_code" name="course_code"><br><br>
+
+      <lable for="branch">Branch :</lable>
+    <select id="branch" name="branch">
+      <option value="CM ">CM </option>
+      <option value="IF"> IF </option> 
+    </select>
+      <br><br>
+      <lable for="year">year :</lable>
+    <select id="year" name="year">
+      <option value="1">1 </option>
+      <option value="2"> 2 </option>
+      <option value="3">3 </option>
+    </select>
+      <br><br>
+  <lable for="pt">PT :</lable>
+  <select id="pt" name="pt">
+
+    <option value="1">1 </option>
+    <option value="2"> 2 </option>
+  </select>
+  <br><br>
+  <label for="Question 1">Question 1 :</label>
+  <input type="text" name="Q1" id="Q1">
+  <br><br>
+  <label for="Question 2">Question 2 :</label>
+  <input type="text" name="Q2" id="Q2">
+  <br><br>
+  <label for="Question 3">Question 3 :</label>
+  <input type="text" name="Q3" id="Q3">
+  <br><br>
+  <label for="Question 4">Question 4 :</label>
+  <input type="text" name="Q4" id="Q4">
+  <br><br>
+  <label for="Question 5">Question 5 :</label>
+  <input type="text" name="Q5" id="Q5">
+  <br><br>
+  <label for="Question 6">Question 6 :</label>
+  <input type="text" name="Q6" id="Q6">
+  <br><br>
+  <label for="Question 7">Question 7 :</label>
+  <input type="text" name="Q7" id="Q7">
+  <br><br>
+  <label for="Question 8">Question 8 :</label>
+  <input type="text" name="Q8" id="Q8">
+  <br><br>
+  <input type="submit" value="Submit">
+</form>
+{%endblock body%}
